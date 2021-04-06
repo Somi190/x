@@ -1,0 +1,7 @@
+import marshal
+fd = open('path/to/my.pyc', 'rb'
+)
+magic = fd.read(4) # python version specific magic num
+date = fd.read(4)  # compilation date
+code_object = marshal.load(fd)
+fd.close()
